@@ -4,7 +4,12 @@ type Photo = {
   url: string;
 }
 
-export async function getPhoto() {
+export async function getPhoto(foto?: string) {
   const res = await fetch('/data/photos.json');
-  return (await res.json()) as Photo[];
+  const allPhotos = (await res.json()) as Photo[];
+
+  if (foto) {
+    return allPhotos.filter((p) => p.id === foto || p.title.includes(foto));
+  }
+  return allPhotos;
 }
