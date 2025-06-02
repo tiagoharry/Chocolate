@@ -6,11 +6,11 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-type PageParams = {
-  params: {
-    foto: string;
-  }
-}
+// type PageParams = {
+//   params: {
+//     foto: string;
+//   }
+// }
 
 type Photo = {
   id: string;
@@ -18,7 +18,7 @@ type Photo = {
   url: string;
 }
 
-export default function Photos({ params }: PageParams) {
+export default function Photos() {
   const [fotos, setFotos] = useState<Photo[]>([]);
   const [selectPhoto, setSelectPhoto] = useState<Photo | null>(null);
   const searchParams = useSearchParams();

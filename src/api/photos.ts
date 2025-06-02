@@ -5,6 +5,6 @@ type Photo = {
 }
 
 export async function getPhoto() {
-  const res = await fetch('http://localhost:3000/data/photos.json');
+  const res = await fetch('/data/photos.json');
   return (await res.json()) as Photo[];
 }
