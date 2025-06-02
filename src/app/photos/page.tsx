@@ -25,11 +25,12 @@ export default function Photos() {
 
   useEffect(() => {
     async function loadPhotos() {
-      const result = await getPhoto(searchParams.foto);
+      const fotosParam = searchParams.get('foto') ?? undefined;
+      const result = await getPhoto(fotosParam);
       setFotos(result)
     }
     loadPhotos();
-  }, [searchParams.foto]);
+  }, [searchParams]);
 
   return (
     <div className="p-5">
