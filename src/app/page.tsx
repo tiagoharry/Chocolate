@@ -1,7 +1,6 @@
 'use client'
 import Header from "@/components/header/page";
 import Head from "./head/page";
-import Photos from "./photos/page";
 import Tour from "./tour/page";
 import Discography from "./discography/page";
 import Contact from "./contact/page";
@@ -9,6 +8,8 @@ import FadeIn from "@/components/fadeIn/page";
 import Footer from "@/components/footer/page";
 import Video from "./video/page";
 import About from "./about/page";
+import { Suspense } from "react";
+import Photos from "./photos/page";
 
 export default function Home() {
   return (
@@ -33,9 +34,11 @@ export default function Home() {
         <section id="about">
           <About />
         </section>
-         <section id="photos">
+        <section id="photos">
           <FadeIn>
-            <Photos />
+            <Suspense fallback={<div>Carregando...</div>}>
+              <Photos />
+            </Suspense>
           </FadeIn>
         </section>
         <section id="contact">
