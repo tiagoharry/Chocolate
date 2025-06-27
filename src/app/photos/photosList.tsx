@@ -1,5 +1,6 @@
 'use client'
 
+import Title from "@/components/title/page";
 // import { getPhoto } from "@/api/photos";
 // import Title from "@/components/title/page";
 import Image from "next/image";
@@ -34,7 +35,7 @@ export default function PhotosList({fotos}: {fotos: Photo[]}) {
 
   return (
     <div className="">
-      {/* <Title text="Fotos" /> */}
+      <Title text="Fotos" />
       <div className="flex justify-center gap-5 py-5">
         {fotos.map((gallery) => (
           <div

@@ -4,7 +4,7 @@ import Title from "@/components/title/page";
 
 export default function Contact() {
   return (
-    <div className="pt-5">
+    <div className="mt-22">
       <Title text="Contato" />
       <form action="" className="grid justify-center gap-2 bg-gray-500 rounded-t-2xl py-5">
         <Input label="Nome" name="nome" />

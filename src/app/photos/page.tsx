@@ -11,7 +11,7 @@ type Photo = {
 export default async function Photos({ searchParams, }: { searchParams: { foto?: string } }) {
   const fotos = await getPhoto(searchParams.foto);
   return (
-    <div className="p-5">
+    <div className="px-5 my-20">
       <Title text="Fotos" />
       <PhotosList fotos={fotos} />
     </div>
