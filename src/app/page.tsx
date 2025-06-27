@@ -8,8 +8,8 @@ import FadeIn from "@/components/fadeIn/page";
 import Footer from "@/components/footer/page";
 import Video from "./video/page";
 import About from "./about/page";
-import { Suspense } from "react";
-import Photos from "./photos/page";
+// import { Suspense } from "react";
+// import Photos from "./photos/page";
 
 export default function Home() {
   
