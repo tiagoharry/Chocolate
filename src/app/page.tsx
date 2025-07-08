@@ -8,8 +8,7 @@ import FadeIn from "@/components/fadeIn/page";
 import Footer from "@/components/footer/page";
 import Video from "./video/page";
 import About from "./about/page";
-// import { Suspense } from "react";
-// import Photos from "./photos/page";
+
 
 export default function Home() {
   
@@ -32,13 +31,7 @@ export default function Home() {
         <section id="about">
           <About />
         </section>
-        {/* <section id="photos">
-          <FadeIn>
-            <Suspense fallback={<div>Carregando...</div>}>
-              <Photos />
-            </Suspense>
-          </FadeIn>
-        </section> */}
+       
         <section id="contact">
           <FadeIn delay={0.2}>
             <Contact />

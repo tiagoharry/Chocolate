@@ -48,7 +48,8 @@ export default function PhotosList({fotos}: {fotos: Photo[]}) {
               width={318}
               height={345}
               alt={gallery.title}
-              className="w-auto h-auto max-w-full rounded-xl "
+              className="w-auto h-auto max-w-full rounded-xl"
+              sizes="100vw"
             />
           </div>
         ))}
@@ -68,6 +69,7 @@ export default function PhotosList({fotos}: {fotos: Photo[]}) {
               height={3454}
               alt={selectPhoto.title}
               className="w-auto h-auto max-w-full mt-10"
+              sizes="100vw"
             />
           </div>
         </div>
