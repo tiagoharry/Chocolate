@@ -1,6 +1,6 @@
 'use client'
 import Title from "@/components/title/page";
-import { GetPhoto } from "@/api/photos";
+import { GetPhoto } from "@/app/api/route";
 import Image from "next/image";
 // import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
