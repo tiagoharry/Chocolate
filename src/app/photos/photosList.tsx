@@ -1,17 +1,15 @@
 'use client'
-
 import Title from "@/components/title/page";
-// import { getPhoto } from "@/api/photos";
-// import Title from "@/components/title/page";
+import { GetPhoto } from "@/api/photos";
 import Image from "next/image";
 // import { useSearchParams } from "next/navigation";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 
-// type PageParams = {
-//   params: {
-//     foto: string;
-//   }
-// }
+type PageParams = {
+  params: {
+    foto: string;
+  }
+}
 
 type Photo = {
   id: string;
@@ -19,19 +17,19 @@ type Photo = {
   url: string;
 }
 
-export default function PhotosList({fotos}: {fotos: Photo[]}) {
-  // const [fotos, setFotos] = useState<Photo[]>([]);
+export default function PhotosList({ params }: PageParams) {
+  const [fotos, setFotos] = useState<Photo[]>([]);
   const [selectPhoto, setSelectPhoto] = useState<Photo | null>(null);
   // const searchParams = useSearchParams();
 
-  // useEffect(() => {
-  //   async function loadPhotos() {
-  //     const fotosParam = searchParams.get('foto') ?? undefined;
-  //     const result = await getPhoto(fotosParam);
-  //     setFotos(result)
-  //   }
-  //   loadPhotos();
-  // }, [searchParams]);
+  useEffect(() => {
+    async function loadPhotos() {
+      // const fotosParam = searchParams.get('foto') ?? undefined;
+      const result = await GetPhoto(params.foto);
+      setFotos(result)
+    }
+    loadPhotos();
+  }, [params.foto]);
 
   return (
     <div className="">

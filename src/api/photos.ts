@@ -4,8 +4,8 @@ type Photo = {
   url: string;
 }
 
-export async function getPhoto(foto?: string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL ?? ''}/data/photos.json`);
+export async function GetPhoto(foto?: string) {
+  const res = await fetch('http://localhost:3000/data/photos.json', { cache: 'no-store' });
   const allPhotos: Photo[] = await res.json();
 
   if (foto) {
