@@ -26,7 +26,7 @@ export default function Photos() {
   return (
     <div className="px-5 my-20">
       <Title text="Fotos" />
-      <div className="flex justify-center gap-5 py-5">
+      <div className="flex flex-col lg:flex-row justify-center gap-5 py-5">
         {photos.map((gallery) => (
           <div
             className="cursor-pointer hover:scale-105 transition duration-300"
@@ -35,10 +35,10 @@ export default function Photos() {
           >
             <Image
               src={gallery.url}
-              width={318}
+              width={480}
               height={345}
               alt={gallery.title}
-              className="w-auto h-auto max-w-full rounded-xl"
+              className="max-w-full rounded-xl"
               sizes="100vw"
             />
           </div>

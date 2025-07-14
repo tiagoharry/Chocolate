@@ -17,7 +17,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className={`${scrolled ? 'bg-black fixed w-full justify-center max-md:justify-between z-10' : 'bg-transparent fixed lg:left-1/2 lg:-translate-x-1/2'} max-lg:w-full flex items-center justify-between px-5 transition-colors duration-500`}>
+    <div className={`${scrolled ? 'bg-black fixed w-full lg:justify-center justify-between z-10' : 'sm:bg-transparent bg-black sm:fixed relative lg:left-1/2 lg:-translate-x-1/2'} max-lg:w-full flex items-center justify-between px-5 transition-colors duration-500`}>
       <Link href={'/'} className="lg:hidden">
         <Image src="/assets/logo.png" width={150} height={150} alt="Chocolate Sensual" />
       </Link>
@@ -25,31 +25,31 @@ export default function Header() {
       </button>
       <ul className={`${navBar ? 'max-lg:flex-col max-lg:opacity-100 max-lg:scale-100 max-lg:pointer-events-auto' : 'max-lg:hidden max-lg:opacity-0 max-lg:scale-95 max-lg:pointer-events-none'} list-group flex items-center gap-5 max-lg:fixed max-lg:top-[100px] max-lg:right-0 max-lg:p-10 max-lg:bg-white max-lg:h-full max-lg:shadow-2xl max-lg:rounded-sm max-lg:inset-0 transform transition-all duration-300 ease-in-out`}>
         <li className="list-group-item d-flex justify-content-between align-items-center font-bold hover:text-red-500 text-white max-lg:text-black">
-          <Link href={'#tour'}>
+          <Link href={'#tour'} onClick={() => setNavBar(!navBar)}>
             Tour
           </Link>
         </li>
           <li className="list-group-item d-flex justify-content-between align-items-center font-bold hover:text-red-500 text-white max-lg:text-black">
-          <Link href={'#discography'}>
+          <Link href={'#discography'} onClick={() => setNavBar(!navBar)}>
             Discografia
           </Link>
         </li>
        
-        <Link href={'/'} className=" max-lg:hidden">
+        <Link href={'/'} className=" max-lg:hidden" onClick={() => setNavBar(!navBar)}>
           <Image src="/assets/logo.png" width={150} height={150} alt="Chocolate Sensual" />
         </Link>
          <li className="list-group-item d-flex justify-content-between align-items-center font-bold hover:text-red-500 text-white max-lg:text-black">
-          <Link href={'#about'}>
+          <Link href={'#about'} onClick={() => setNavBar(!navBar)}>
             Sobre
           </Link>
         </li>
        <li className="list-group-item d-flex justify-content-between align-items-center font-bold hover:text-red-500 text-white max-lg:text-black">
-          <Link href={'#photos'}>
+          <Link href={'#photos'} onClick={() => setNavBar(!navBar)}>
             Fotos
           </Link>
         </li>
         <li className="list-group-item d-flex justify-content-between align-items-center font-bold hover:text-red-500 text-white max-lg:text-black">
-          <Link href={'#contact'}>
+          <Link href={'#contact'} onClick={() => setNavBar(!navBar)}>
             Contato
           </Link>
         </li>
